@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="70.812">
-<testcase classname="Register with Data Driven with map" name="Register with data driven with Map" time="69.76">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="98.976">
+<testcase classname="Register with Data Driven with map" name="Register with data driven with Map" time="98.307">
 <system-out><![CDATA[Given User is already on Registration page..................................passed
 Then user enters users details for Registration.............................passed
 Then close the browser......................................................passed
