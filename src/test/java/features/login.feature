@@ -11,21 +11,31 @@ Feature: Guru99 Home Bank
 #  Then user is on Home Page
 #  Then close the browser
 
-#  with example keyword
-
-  Scenario Outline: login Bank account
+  Scenario: login Bank account
 
     Given User is already on login page
     When title of login page is Guru99 Bank Home Page
-    Then user enters "<username>" and "<password>"
+    Then user enters username and password
     Then user clicks on login page
     Then user is on Home Page
     Then close the browser
 
-    Examples:
-      | username | password |
-      | mngr480097 | tapasYs |
-      | amit       | adhira123 |
+
+#  with example keyword
+
+#  Scenario Outline: login Bank account
+#
+#    Given User is already on login page
+#    When title of login page is Guru99 Bank Home Page
+#    Then user enters "<username>" and "<password>"
+#    Then user clicks on login page
+#    Then user is on Home Page
+#    Then close the browser
+#
+#    Examples:
+#      | username | password |
+#      | mngr480097 | tapasYs |
+#      | amit       | adhira123 |
 
 
 

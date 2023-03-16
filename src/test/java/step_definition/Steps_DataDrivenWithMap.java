@@ -8,6 +8,7 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -18,22 +19,14 @@ public class Steps_DataDrivenWithMap {
     @Given("^User is already on Registration page$")
     public void User_is_already_on_Registration_page()
     {
-        System.setProperty("webdriver.chrome.driver","E:\\Automation\\Drivers\\chromedriver.exe");
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+        driver = new ChromeDriver(options);
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://demo.guru99.com/test/newtours/register.php");
-
     }
-
-//    @When("^user enters firstname and lastname$")
-//    public void user_enters_firstname_and_lastname(DataTable date1) {
-//
-//        for(Map<String,String> mapData : date1.asMaps(String.class,String.class)) {     // use for each map
-//            driver.findElement(By.name("firstName")).sendKeys(mapData.get("Firstname"));
-//            driver.findElement(By.name("lastName")).sendKeys(mapData.get("Lastname"));
-//        }
-//    }
 
     @Then("^user enters users details for Registration$")
     public void user_enters_users_details_for_Registration(DataTable data2) {

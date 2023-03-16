@@ -7,6 +7,7 @@
 //import org.junit.Assert;
 //import org.openqa.selenium.*;
 //import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.chrome.ChromeOptions;
 //
 //import java.util.concurrent.TimeUnit;
 //
@@ -16,8 +17,9 @@
 //    @Given("^User is already on login page$")
 //    public void user_already_on_login_page  ()
 //    {
-//        System.setProperty("webdriver.chrome.driver","E:\\Automation\\Drivers\\chromedriver.exe");
-//        driver = new ChromeDriver();
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--remote-allow-origins=*");
+//        driver = new ChromeDriver(options);
 //        driver.manage().window().maximize();
 //        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 //        driver.get("https://www.demo.guru99.com/V4/");
@@ -48,7 +50,7 @@
 //        Assert.assertEquals("Guru99 Bank Manager HomePage",title);
 //    }
 //
-//    @And("^user click on Log Out$")
+//   @And("^user click on Log Out$")
 //    public void user_click_on_sign_off()
 //    {
 //        driver.findElement(By.xpath("//a[text()='Log out']")).click();
@@ -86,8 +88,8 @@
 //    }
 //
 //}
-
-
-
-// mngr480097
-// tapasYs
+//
+//
+//
+//// mngr480097
+//// tapasYs

@@ -5,10 +5,6 @@ Feature: Register with Data Driven with map
   Scenario: Register with data driven with Map
 
     Given User is already on Registration page
-#    When user enters firstname and lastname
-#      | Firstname | Lastname |
-#      | ADHIRA | PATIL |
-##      | MONIKA | PATIL |
 
     Then user enters users details for Registration
       | Firstname | Lastname | User Name  | Password   | Confirm Password |
